@@ -77,5 +77,13 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.UCI
         {
             _client.Sort(columnName, sortOptionButtonText);
         }
+
+        /// <summary>
+        /// Get column titles
+        /// </summary>
+        public List<string> GetColumns()
+        {
+            return _client.GetGridColumns();
+        }
     }
 }

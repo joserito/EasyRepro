@@ -61,6 +61,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.UCI
             public static string Rows = "Grid_Rows";
             public static string ChartSelector = "Grid_ChartSelector";
             public static string ChartViewList = "Grid_ChartViewList";
+            public static string GridSortColumnList = "Grid_SortColumnList";
             public static string GridSortColumn = "Grid_SortColumn";
             public static string CellContainer = "Grid_CellContainer";
             public static string ViewSelector = "Grid_ViewSelector";
@@ -373,6 +374,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.UCI
             { "Grid_Rows"           , "//div[contains(@role,'row')]"},
             { "Grid_ChartSelector"           , "//span[contains(@id,'ChartSelector')]"},
             { "Grid_ChartViewList"           , "//ul[contains(@role,'listbox')]"},
+            { "Grid_SortColumnList",            "//div[@data-type='Grid']//div[contains(@class,'wj-cell wj-header')]//div[contains(@class,'header')]"},
             { "Grid_SortColumn",            "//div[@data-type='Grid']//div[@title='[COLNAME]']//div[contains(@class,'header')]"},
             { "Grid_CellContainer"    ,"//div[@role='grid'][@data-id='grid-cell-container']"},
             { "Grid_ViewSelector"   , "//span[contains(@id,'ViewSelector')]" },
