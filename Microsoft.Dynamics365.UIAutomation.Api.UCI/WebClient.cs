@@ -1799,6 +1799,20 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.UCI
             });
         }
 
+        public BrowserCommandResult<List<string>> GetGridColumns(int thinkTime = Constants.DefaultThinkTime)
+        {
+            ThinkTime(thinkTime);
+
+            return this.Execute(GetOptions($"Get columns"), driver =>
+            {
+                var columns = driver.FindElements(By.XPath(AppElements.Xpath[AppReference.Grid.GridSortColumnList]));
+                return columns
+                    .Where(e => e.HasAttribute("title") && !string.IsNullOrWhiteSpace(e.GetAttribute("title")) )
+                    .Select(e => e.GetAttribute("title"))
+                    .ToList();
+            });
+        }
+
         #endregion
 
         #region RelatedGrid
