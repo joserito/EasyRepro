@@ -81,7 +81,7 @@ namespace Microsoft.Dynamics365.UIAutomation.Api.UCI
         /// <summary>
         /// Get column titles
         /// </summary>
-        public List<string> GetColumns()
+        public List<string> GetGridColumns()
         {
             return _client.GetGridColumns();
         }
